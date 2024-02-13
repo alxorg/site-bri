@@ -1,0 +1,18 @@
+.section-solutions {
+  background-image: linear-gradient(to top, var(--tertiary), var(--primary));
+  color: var(--secondary);
+  padding: 60px 20px;
+  border-radius: 60px;
+}
+
+.section-solutions__header {
+  margin-bottom: 60px;
+}
+
+.section-solutions__header h2 {
+  font-size: 32px;
+}
+
+.section-solutions__solution {
+  margin-bottom: 30px;
+}

@@ -1,9 +1,24 @@
+:root {
+  --secondary: #FFF4EF;
+  --primary: #E74C3C;
+  --tertiary: #D13E6C;
+  --black: #000;
+  --gray-1: #7A7A7A;
+  --gray-2: #BABABA;
+  --gray-3: #F2F2F2;
+  --font-headline: "Comfortaa";
+  --font-content: "Nunito";
+  --container-gutter: 5%;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: var(--secondary);
 }
 
 a {
@@ -11,6 +26,115 @@ a {
   text-decoration: none;
 }
 
+p,
+a,
+label {
+  font-family: var(--font-content);
+  font-weight: 300;
+}
+
+h2,
+h3 {
+  font-family: var(--font-content);
+  font-weight: 600;
+}
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* GRID */
+.container {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: center;
+}
+
+/* TEXT */
+.text-center {
+  text-align: center;
+}
+
+.title--lg {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+}
+
+.title--sm {
+  font-family: var(--font-content);
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, var(--tertiary), var(--primary));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+/* FORMS */
+.form {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-content);
+  margin-top: 20px
+}
+
+.form fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form label {
+  margin-bottom: 6px;
+}
+
+.form input {
+  height: 40px;
+  padding: 10px;
+  border: 1px solid var(--tertiary);
+  border-radius: 100px;
+  background: transparent;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 10px 40px;
+  background: linear-gradient(45deg, var(--tertiary), var(--primary));
+  border:0;
+  border-radius: 100px;
+  color: var(--secondary);
 }
