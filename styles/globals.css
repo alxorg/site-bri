@@ -1,24 +1,30 @@
 :root {
-  --secondary: #FFF4EF;
   --primary: #E74C3C;
+  --secondary: #FFF4EF;
   --tertiary: #D13E6C;
   --black: #000;
-  --gray-1: #7A7A7A;
-  --gray-2: #BABABA;
-  --gray-3: #F2F2F2;
+  --gray-1: #323232;
+  --gray-2: #7A7A7A;
+  --gray-3: #BABABA;
+  --gray-4: #F2F2F2;
   --font-headline: "Comfortaa";
   --font-content: "Nunito";
   --container-gutter: 5%;
+  --media-medium: 768px;
+  --media-large: 992px;
+  --media-extra-large: 1200px;
+  --gradient: linear-gradient(45deg, var(--tertiary), var(--primary));
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 10px;
 }
 
 body {
-  background: var(--secondary);
+  background: var(--primary);
 }
 
 a {
@@ -31,6 +37,16 @@ a,
 label {
   font-family: var(--font-content);
   font-weight: 300;
+  font-size: 1.4rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
 }
 
 h2,
@@ -45,10 +61,9 @@ h3 {
   margin: 0;
 }
 
-/* GRID */
-.container {
-  width: 100%;
-  padding: 0 5%;
+.section {
+  margin-bottom: 40px;
+  z-index: 1;
 }
 
 .flex {
@@ -79,6 +94,11 @@ h3 {
   align-items: center;
 }
 
+.element-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* TEXT */
 .text-center {
   text-align: center;
@@ -86,14 +106,14 @@ h3 {
 
 .title--lg {
   font-family: var(--font-headline);
-  font-size: 2rem;
+  font-size: 3.2rem;
 }
 
 .title--sm {
   font-family: var(--font-content);
-  font-size: 1.5rem;
-  font-weight: 600;
-  background: linear-gradient(45deg, var(--tertiary), var(--primary));
+  font-size: 2.2rem;
+  font-weight: 500;
+  background: var(--gradient);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -102,39 +122,72 @@ h3 {
   color: var(--primary);
 }
 
-/* FORMS */
-.form {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-content);
-  margin-top: 20px
-}
-
-.form fieldset {
-  border: 0;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.form label {
-  margin-bottom: 6px;
-}
-
-.form input {
-  height: 40px;
-  padding: 10px;
-  border: 1px solid var(--tertiary);
-  border-radius: 100px;
-  background: transparent;
+.color-secondary {
+  color: var(--secondary);
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
-  padding: 10px 40px;
-  background: linear-gradient(45deg, var(--tertiary), var(--primary));
-  border:0;
+  padding: 18px 60px;
+  background: var(--secondary);
+  border: 0;
   border-radius: 100px;
-  color: var(--secondary);
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 1.6rem;
+  box-shadow: 0 0 0 0px var(--secondary);
+  transition: box-shadow .8s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 26px 1px var(--secondary);
+  transition: box-shadow .8s;
+}
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+  .title--lg {
+    font-size: 5.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  p,
+  a,
+  label {
+    font-family: var(--font-content);
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  .title--lg {
+    font-size: 6.2rem;
+  }
+
+  .title--sm {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  p,
+  a,
+  label {
+    font-family: var(--font-content);
+    font-weight: 300;
+    font-size: 2.2rem;
+  }
+
+  .title--lg {
+    font-size: 6.4rem;
+  }
+
+  .title--sm {
+    font-size: 3.2rem;
+  }
+
+  .title--lg {
+    font-size: 7.2rem;
+  }
 }

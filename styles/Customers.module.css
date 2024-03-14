@@ -3,9 +3,13 @@
   position: relative;
 }
 
+.section-customers__header {
+  margin-bottom: 60px;
+}
+
 .section-customers::after {
-  content: "";
-  width: 60%;
+  /* content: "";
+  width: 70%;
   height: 1px;
   display: block;
   margin: 0 auto;
@@ -13,11 +17,17 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 
 .section-customers__brands {
   display: flex;
   margin: 20px 0;
   gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section-customers__brands img {
+  max-width: 20%;
 }

@@ -1,8 +1,20 @@
 .section-solutions {
-  background-image: linear-gradient(to top, var(--tertiary), var(--primary));
   color: var(--secondary);
-  padding: 60px 20px;
+  padding: 10%;
+  position: relative;
+}
+
+.section-solutions__effect {
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(to top, var(--tertiary), var(--primary));
   border-radius: 60px;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(1.11, 1);
 }
 
 .section-solutions__header {
@@ -10,9 +22,23 @@
 }
 
 .section-solutions__header h2 {
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 .section-solutions__solution {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width:992px) {
+  .section-solutions__header h2 {
+    font-size: 4.2rem;
+  }
+  
+  .section-solutions__header {
+    margin-bottom: 100px;
+  }
+
+  .section-solutions__solution {
+    margin-bottom: 70px;
+  }  
 }
