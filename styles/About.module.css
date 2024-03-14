@@ -1,0 +1,60 @@
+@keyframes fadeInImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTextHero {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes imgBoucing {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.section-about {
+  margin-top: 110px;
+}
+
+.section-about__img-hero {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  animation: fadeInImg 3s backwards, 3s linear infinite alternate imgBoucing;
+}
+
+.section-about__hero {
+  margin-bottom: 30px;
+  max-width: 1050px;
+  animation: fadeInTextHero 3s backwards;
+}
+
+.section-about__article {
+  margin-top: 50px;
+  max-width: 1000px;
+}
+
+@media screen and (min-width: 992px){
+  .section-about {
+    margin-bottom: 180px;
+  }
+}
