@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   const calculateColor = () => {
-    if(document) {
+    if(typeof document !== "undefined") {
       const colorPercentage = (scrollPosition / 4 / (document.body.scrollHeight - window.innerHeight)) * 100;
       return `rgba(255, 255, 255, ${colorPercentage})`;
     }
