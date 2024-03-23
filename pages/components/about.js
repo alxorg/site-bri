@@ -24,10 +24,10 @@ const About = () => {
       <article className={`${styles["section-about__article"]}`}>
         <h2 className="title--sm">sobre a bri</h2>
         <p>
-          Somos uma <strong className="color-primary">software house?</strong>
+          Somos uma <strong className="color-primary">software house? </strong>
           &#129300; <br />
-          Pode até ser, mas prerimos dizer que somos um laboratório de{" "}
-          <strong className="color-primary">produtos digitais</strong>.
+          Pode até ser, mas prerimos dizer que somos um laboratório de
+          <strong className="color-primary"> produtos digitais</strong>.
         </p>
         <br />
         <p>
