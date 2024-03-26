@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+import { Element } from "react-scroll";
 import styles from "../../styles/About.module.css";
 
 const About = () => {
   return (
-    <section
-      className={`section ${styles["section-about"]} container`}
-      id="about"
-    >
+    <section className={`section ${styles["section-about"]} container`}>
       <header className={`${styles["section-about__hero"]} element-center`}>
+        <div className={`${styles['circle-effect']}`} />
+        <div className={`${styles['circle-effect']}`} />
         <h2 className="title--lg text-center">
           Vc tem uma <strong className="color-primary">idéia</strong>, nós{" "}
           <strong className="color-primary">sabemos</strong> como{" "}
@@ -21,12 +21,12 @@ const About = () => {
         alt="Desenho de uma garota sentada usando um smartphone"
       />
 
-      <article className={`${styles["section-about__article"]}`}>
+      <article className={`${styles["section-about__article"]}`} id="about">
         <h2 className="title--sm">sobre a bri</h2>
         <p>
           Somos uma <strong className="color-primary">software house? </strong>
           &#129300; <br />
-          Pode até ser, mas prerimos dizer que somos um laboratório de
+          Pode até ser, mas preferimos dizer que somos um laboratório de
           <strong className="color-primary"> produtos digitais</strong>.
         </p>
         <br />

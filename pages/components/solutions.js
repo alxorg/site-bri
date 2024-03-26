@@ -49,7 +49,7 @@ const Solutions = () => {
       <article className={`${styles["section-solutions__solution"]}`}>
         <h2 className="title--sm color-secondary">Desenvolvimento de SaaS</h2>
         <p>
-          "SaaS vai além de um sistema, trata-se de solucionar problemas. Por
+          SaaS vai além de um sistema, trata-se de solucionar problemas. Por
           isso, oferecemos o serviço completo, pensando desde a experiência do
           usuário, desenvolvimento do software até a infraestrutura que você
           precisa para colocar o seu projeto online.
@@ -59,7 +59,7 @@ const Solutions = () => {
       <article className={`${styles["section-solutions__solution"]}`}>
         <h2 className="title--sm color-secondary">Site institucional </h2>
         <p>
-          "Se você concorda que todas as empresas são mais potentes estando na
+          Se você concorda que todas as empresas são mais potentes estando na
           internet, então você concorda que ter um site não é coisa do passado.
           A ideia é olharmos para o seu site como um cartão de visitas digital,
           com atenção na usabilidade, design e SEO.

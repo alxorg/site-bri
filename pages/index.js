@@ -39,14 +39,16 @@ export default function Home() {
         <Solutions />
         <Customers />
         <Contact />
+        <div id='ghost-contact'></div>
       </>
+      <div className={`${styles['bar-effect']}`} style={styleEffect3} />
+      {/* <div className={`${styles['circle-effect']}`} />
       <div className={`${styles['circle-effect']}`} />
       <div className={`${styles['circle-effect']}`} />
-      <div className={`${styles['circle-effect']}`} />
-      <div className={`${styles['circle-effect']}`} />
+      <div className={`${styles['circle-effect']}`} /> */}
       {/* <div className={`${styles['circle-effect']}`} />
       <div className={`${styles['circle-effect']}`} /> */}
-      <div className={`${styles['bar-effect']}`} style={styleEffect3} />
+      {/* <div className={`${styles['bar-effect']}`} style={styleEffect3} /> */}
     </main>
   )
 }

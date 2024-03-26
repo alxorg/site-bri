@@ -37,11 +37,11 @@ a,
 label {
   font-family: var(--font-content);
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 p {
-  line-height: 3rem;
+  line-height: 160%;
 }
 
 input:focus,
@@ -63,6 +63,16 @@ h3 {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+[class*="_circle-effect"] {
+  display: block;
+  position: absolute;
+  background: var(--primary);
+  filter: blur(40px);
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
 }
 
 .section {
@@ -115,7 +125,7 @@ h3 {
 
 .title--sm {
   font-family: var(--font-content);
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 500;
   background: var(--gradient);
   -webkit-background-clip: text;

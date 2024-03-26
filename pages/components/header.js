@@ -69,7 +69,7 @@ const Header = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={-100}
             duration={500}
           >
             sobre
@@ -79,7 +79,7 @@ const Header = () => {
             to="solutions"
             spy={true}
             smooth={true}
-            offset={100}
+            offset={-100}
             duration={500}
           >
             soluções
@@ -89,17 +89,17 @@ const Header = () => {
             to="customers"
             spy={true}
             smooth={true}
-            offset={100}
+            offset={-100}
             duration={500}
           >
             clientes
           </Link>
           <Link
             activeClass="active"
-            to="contact"
+            to="ghost-contact"
             spy={true}
             smooth={true}
-            offset={100}
+            offset={200}
             duration={500}
           >
             contato

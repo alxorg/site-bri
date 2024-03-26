@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <section className={`${styles["section--contact"]}`} id="contact">
+    <section className={`${styles["section--contact"]}`} id="__">
       <h1 className="title--sm text-center color-secondary">
         Queremos saber sobre a sua ideia
       </h1>
