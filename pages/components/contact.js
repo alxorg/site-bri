@@ -1,22 +1,45 @@
 import React from "react";
 import styles from "../../styles/Contact.module.css";
+import Image from "next/image";
 
 const Contact = () => {
   const [state, setState] = React.useState({});
+  const [loading, setLoading] = React.useState(false)
+  const [sent, setSent] = React.useState(false)
 
   const handlerChange = ({ target: { value, name } }) =>
     setState({ ...state, [name]: value });
 
   const sendEmail = async (ev) => {
     ev.preventDefault();
-    console.log(state)
-    const result = await fetch("http://localhost:3000/api/hello", {
+    setLoading(true)
+    const BASE_URL_API = process.env.NEXT_PUBLIC_API;
+    const result = await fetch(`${BASE_URL_API}/hello`, {
       method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
       body: JSON.stringify(state),
-    }).then((json) => console.log(json));
-    console.log(result, "<<<< here");
+    }).then(({ status }) => {
+      if (status === 200) {
+        setTimeout(() => {
+          setLoading(false);
+          setSent(true);
+        }, 2000);
+      }
+    });
   };
-
+  if (sent) {
+    return (
+      <section className={`${styles["section--contact"]}`} id="__">
+        <img
+          src="./email-sent.svg"
+          alt="Imagem ilustrativa de um garoto arremessando um avião de papel"
+          className={`${styles["section--contact__image-email-sent"]}`}
+        />
+      </section>
+    );
+  }
   return (
     <section className={`${styles["section--contact"]}`} id="__">
       <h1 className="title--sm text-center color-secondary">
@@ -36,7 +59,12 @@ const Contact = () => {
 
         <fieldset>
           <label for="assunto">assunto</label>
-          <input type="text" name="assunto" id="assunto" onChange={handlerChange} />
+          <input
+            type="text"
+            name="assunto"
+            id="assunto"
+            onChange={handlerChange}
+          />
         </fieldset>
 
         <fieldset>
@@ -45,9 +73,13 @@ const Contact = () => {
         </fieldset>
 
         <div className={styles["contact-form__action"]}>
-          <button className="btn" onClick={sendEmail}>
-            Enviar
-          </button>
+          {loading ? (
+            <p className="color-secondary">só um instante...</p>
+          ) : (
+            <button className="btn" onClick={sendEmail}>
+              Bora conversar
+            </button>
+          )}
         </div>
       </form>
       <div className={styles["circle-effect"]} />

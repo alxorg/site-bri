@@ -1,15 +1,11 @@
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 const resend = new Resend("re_cvnsCxLN_AWqktGWXWK88juAy9yLaYHSN");
 
 export default async function sendEmail(req, res) {
-  console.log(req.body)
-  const {body: {
-    nome,
-    email,
-    assunto,
-    mensagem
-  }} = req;
+  const {
+    body: { nome, email, assunto, mensagem },
+  } = req;
   const { data, error } = await resend.emails.send({
     from: 'Site Bri <onboarding@resend.dev>',
     to: ['alexxmirandaa@gmail.com'],
@@ -27,4 +23,4 @@ export default async function sendEmail(req, res) {
   }
 
   res.status(200).json(data);
-};
+}

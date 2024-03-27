@@ -75,6 +75,24 @@
   width: 100%;
 }
 
+@keyframes fadeInSentEmail {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.section--contact__image-email-sent {
+  display: block;
+  margin: 0 auto;
+  max-width: 340px;
+  animation: fadeInSentEmail 1s forwards;
+}
+
 @media screen and (max-width: 899px) {
   .contact-form {
     padding: 0 5%;
@@ -85,12 +103,13 @@
   .section--contact {
     padding-top: 20vh;
   }
+
   .contact-form {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
   }
-  
+
   .contact-form fieldset.fieled-col-2 {
     width: calc(50% - 10px);
   }
