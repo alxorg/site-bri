@@ -14,7 +14,7 @@ const Contact = () => {
     ev.preventDefault();
     setLoading(true)
     const BASE_URL_API = process.env.NEXT_PUBLIC_API;
-    const result = await fetch(`${BASE_URL_API}/hello`, {
+    fetch(`${BASE_URL_API}/contact`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
