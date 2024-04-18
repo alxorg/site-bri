@@ -4,7 +4,7 @@ import Cors from "cors";
 const resend = new Resend("re_cvnsCxLN_AWqktGWXWK88juAy9yLaYHSN");
 
 const cors = Cors({
-  origin: "https://brielab.com.br",
+  origin: "https://www.brielab.com.br",
   methods: ["POST", "GET", "HEAD"],
 });
 
@@ -27,7 +27,7 @@ export default async function sendEmail(req, res) {
     });
 
     if (error) {
-      return res.status(400).json(error);
+      return error
     }
 
     res.status(200).json(data);
